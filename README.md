@@ -3,7 +3,7 @@
 [![Tests](https://github.com/esensar/kotlinx-serialization-msgpack/workflows/Tests/badge.svg)](https://github.com/esensar/kotlinx-serialization-msgpack/actions)
 [![javadoc](https://javadoc.io/badge2/com.ensarsarajcic.kotlinx/serialization-msgpack/javadoc.svg)](https://javadoc.io/doc/com.ensarsarajcic.kotlinx/serialization-msgpack)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.ensarsarajcic.kotlinx/serialization-msgpack/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.ensarsarajcic.kotlinx/serialization-msgpack)
-[![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/com.ensarsarajcic.kotlinx/serialization-msgpack?server=https%3A%2F%2Fs01.oss.sonatype.org)](https://s01.oss.sonatype.org/content/repositories/snapshots/com/ensarsarajcic/kotlinx/serialization-msgpack/)
+[![Sonatype Nexus (Snapshots)](https://img.shields.io/nexus/s/com.ensarsarajcic.kotlinx/serialization-msgpack?server=https%3A%2F%2Fossrh-staging-api.central.sonatype.com)](https://ossrh-staging-api.central.sonatype.com/content/repositories/snapshots/com/ensarsarajcic/kotlinx/serialization-msgpack/)
 
 **Project is under active development! Important features may be missing and bugs are present!**
 
@@ -38,7 +38,7 @@ implementation("com.ensarsarajcic.kotlinx:serialization-msgpack-unsigned-support
 ```kotlin
 repositories {
     maven {
-        url = uri("https://oss.sonatype.org/content/repositories/snapshots")
+        url = uri("https://ossrh-staging-api.central.sonatype.com/content/repositories/snapshots")
     }
 }
 implementation("com.ensarsarajcic.kotlinx:serialization-msgpack:${kotlinxSerializationMsgPackSnapshotVersion}")
