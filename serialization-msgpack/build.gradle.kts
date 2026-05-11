@@ -1,3 +1,7 @@
+@file:OptIn(ExperimentalWasmDsl::class)
+
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
+
 plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
@@ -24,6 +28,19 @@ kotlin {
     js {
         compilations.create("benchmark") {
             associateWith(this@js.compilations.getByName("main"))
+        }
+        browser {
+            testTask {
+                useKarma {
+                    useChromeHeadless()
+                }
+            }
+        }
+        nodejs()
+    }
+    wasmJs {
+        compilations.create("benchmark") {
+            associateWith(this@wasmJs.compilations.getByName("main"))
         }
         browser {
             testTask {
