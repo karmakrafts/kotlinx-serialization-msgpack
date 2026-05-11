@@ -55,7 +55,6 @@ kotlin {
         commonMain {
             dependencies {
                 implementation(project(":serialization-msgpack"))
-                implementation(libs.kotlinx.datetime)
             }
         }
         commonTest {
