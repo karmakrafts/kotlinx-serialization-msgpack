@@ -9,7 +9,14 @@ plugins {
     alias(libs.plugins.ktlint)
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(libs.versions.java.get().toInt()))
+    }
+}
+
 kotlin {
+    jvmToolchain(libs.versions.java.get().toInt())
     jvm()
     js {
         browser()
@@ -24,7 +31,27 @@ kotlin {
         commonMain {
             dependencies {
                 implementation(project(":serialization-msgpack"))
+                implementation(libs.kotlinx.benchmark.runtime)
             }
         }
+        jvmMain {
+            dependencies {
+                implementation(libs.msgpak.core)
+                implementation(libs.msgpak.dataformat)
+            }
+        }
+        webMain {
+            dependencies {
+                implementation(npm("@msgpack/msgpack", ">2.0.0 <3.0.0"))
+            }
+        }
+    }
+}
+
+benchmark {
+    targets {
+        register("jvm")
+        register("js")
+        register("wasmJs")
     }
 }

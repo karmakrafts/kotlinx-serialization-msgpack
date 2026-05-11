@@ -6,7 +6,6 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlinx.serialization)
-    alias(libs.plugins.kotlinx.benchmark)
     alias(libs.plugins.dokka)
     alias(libs.plugins.ktlint)
     signing
@@ -85,16 +84,5 @@ kotlin {
                 implementation(libs.kotlin.test)
             }
         }
-        named("jvmBenchmark") {
-            dependencies {
-                implementation(libs.kotlinx.benchmark.runtime)
-            }
-        }
-    }
-}
-
-benchmark {
-    targets {
-        register("jvmBenchmark")
     }
 }
