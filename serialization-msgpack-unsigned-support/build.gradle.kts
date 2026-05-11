@@ -14,6 +14,7 @@ plugins {
 }
 
 kotlin {
+    withSourcesJar()
     jvm {
         compilations.create("benchmark") {
             associateWith(this@jvm.compilations.getByName("main"))

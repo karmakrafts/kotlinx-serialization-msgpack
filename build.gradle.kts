@@ -24,6 +24,8 @@ allprojects {
 
 subprojects {
     afterEvaluate {
+        if(project.name.endsWith("-benchmarks")) return@afterEvaluate
+
         configure<SigningExtension> {
             isRequired = false
             sign(extensions.getByType<PublishingExtension>().publications)

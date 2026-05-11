@@ -23,3 +23,4 @@ dependencyResolutionManagement {
 include("serialization-msgpack")
 include("serialization-msgpack-timestamp-extension")
 include("serialization-msgpack-unsigned-support")
+include("serialization-msgpack-benchmarks")
