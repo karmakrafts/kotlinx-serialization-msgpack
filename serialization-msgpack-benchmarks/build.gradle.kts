@@ -16,6 +16,9 @@ java {
 }
 
 kotlin {
+    compilerOptions {
+        freeCompilerArgs.add("-Xannotation-default-target=param-property")
+    }
     jvmToolchain(libs.versions.java.get().toInt())
     jvm()
     js {
@@ -43,6 +46,7 @@ kotlin {
         webMain {
             dependencies {
                 implementation(npm("@msgpack/msgpack", ">2.0.0 <3.0.0"))
+                implementation(libs.kotlin.wrappers.browser)
             }
         }
     }
