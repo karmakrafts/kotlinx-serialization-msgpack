@@ -1,5 +1,7 @@
 [versions]
 
+java = "17"
+
 androidGradle = "9.2.1"
 androidMinSdk = "28"
 androidTargetSdk = "36"
