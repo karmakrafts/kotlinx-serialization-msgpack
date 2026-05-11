@@ -39,6 +39,10 @@ kotlin {
     macosArm64()
     mingwX64()
     linuxX64()
+    // TODO: remove deprecated targets in next release
+    macosX64()
+    tvosX64()
+    watchosX64()
 
     applyDefaultHierarchyTemplate()
 

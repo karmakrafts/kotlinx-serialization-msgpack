@@ -10,6 +10,7 @@ kotlinxDateTime = "0.8.0"
 kotlinxBenchmark = "0.4.17"
 ktlint = "14.2.0"
 dokka = "2.2.0"
+
 msgpak = "0.9.12"
 
 [libraries]
@@ -18,6 +19,7 @@ kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotl
 kotlinx-benchmark-runtime = { module = "org.jetbrains.kotlinx:kotlinx-benchmark-runtime", version.ref = "kotlinxBenchmark" }
 kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serialization-core", version.ref = "kotlinxSerialization" }
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinxDateTime" }
+
 msgpak-core = { module = "org.msgpack:msgpack-core", version.ref = "msgpak" }
 msgpak-dataformat = { module = "org.msgpack:jackson-dataformat-msgpack", version.ref = "msgpak" }
 

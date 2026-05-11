@@ -20,11 +20,6 @@ val sonatypeUsernameEnv: String? = System.getenv()["SONATYPE_USERNAME"]
 allprojects {
     group = "com.ensarsarajcic.kotlinx"
     version = version.toString() + if (snapshot == "true") "-SNAPSHOT" else ""
-
-    repositories {
-        mavenLocal()
-        mavenCentral()
-    }
 }
 
 subprojects {
