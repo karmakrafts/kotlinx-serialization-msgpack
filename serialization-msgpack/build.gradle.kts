@@ -49,6 +49,10 @@ kotlin {
         nodejs()
     }
 
+    androidNativeX86()
+    androidNativeX64()
+    androidNativeArm64()
+    androidNativeArm32()
     iosArm64()
     iosX64()
     iosSimulatorArm64()
