@@ -13,8 +13,15 @@ plugins {
     `maven-publish`
 }
 
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(libs.versions.java.get().toInt()))
+    }
+}
+
 kotlin {
     withSourcesJar()
+    jvmToolchain(libs.versions.java.get().toInt())
     jvm {
         compilations.create("benchmark") {
             associateWith(this@jvm.compilations.getByName("main"))
